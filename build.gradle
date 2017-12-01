@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+archivesBaseName = "leap-year"
+version = '1.0'
+mainClassName = "LeapYear"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+}@Test
+  public void isLeapYear_forNumberDivisibleByFour_true() {
+    // test code will eventually go here
+    LeapYear leapYear = new LeapYear();
+ assertEquals(true, leapYear.isLeapYear(2012));
+
+
+  }
