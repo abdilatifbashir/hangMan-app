@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class Hangman{
   Random randomNum=new Random();
+  private List<String> alphabet=new ArrayList<String>();
   private static String[] guesses={"computer","program","moringa"}
   private static String userWord=guesses[randomNum.nextInt(guesses.length)];
   private String asterisk=new String(new char[userWord.length()]).replace("\0","*");
@@ -24,5 +25,7 @@ public class Hangman{
   public int GetCounter(){
     return counter;
   }
+public void gamer(String trial){
 
+}
 }
