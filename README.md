@@ -3,10 +3,10 @@
 ## Descriptions
 * This is a terminal game of fun which allows users to guess random words letter by letter. But the twist is that there is a set number of chances a player has to guess the word.the user is given 7 chances of trial.
 ## Setup/Installation
-* install mansdk using commmad:install sdk
+* install sdk(software develeopement kit) or jdk(java develoepemet kit) using commmad:install sdk
 * Install java in your machine:sdk install java-8
 * git clone <repository-url> this repository
-* cd to hangman<project directory>
+* cd to hangMan-app<project directory>
 
 
 ## Build
@@ -34,3 +34,4 @@ No known bugs
 
 
 ## build by abdilatif:https://github.com/abdilatifbashir.
+## android dev.
