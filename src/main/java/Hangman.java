@@ -7,7 +7,7 @@ import java.util.Random;
 public class Hangman{
   Random randomNum=new Random();
   private List<String> alphabet=new ArrayList<String>();
-  private static String[] guesses={"computer","program","moringa"}
+  private static String[] guesses={"computer","program","moringa"};
   private static String userWord=guesses[randomNum.nextInt(guesses.length)];
   private String asterisk=new String(new char[userWord.length()]).replace("\0","*");
   private int counter=0;
@@ -43,11 +43,11 @@ public void gamer(String trial){
     if(userWord.charAt(i)==trial.charAt(0)){
       rightGuesses+=trial.charAt(0);
     }
-    elseif(asterisk.charAt(i)!='*'){
+    else if(asterisk.charAt(i)!='*'){
       rightGuesses+=charAt(i);
     }
     else{
-      rightGuesses+="*"
+      rightGuesses+="*";
     }
   }
 

@@ -17,7 +17,7 @@ public class HangManApp{
          boolean hangOver= hangman.getHang();
           hangman.gamer(guessedLetter);
           if(hangOver){
-            hangSketch()
+            hangSketch();
 
           }
 
