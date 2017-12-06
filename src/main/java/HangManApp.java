@@ -16,10 +16,20 @@ public class HangManApp{
          int counter=hangman.GetCounter();
          boolean hangOver= hangman.getHang();
           hangman.gamer(guessedLetter);
-       }
+          if(hangOver){
+            hangSketch()
 
-       public static void hangmanImage() {
-   if (count == 1) {
+          }
+
+       }
+       if(userWord.equals(rightGuesses)){
+         System.out.println("cheers,you won the game");
+       }
+     }
+     int counter=hangman.GetCounter();
+
+public static void hangSketch() {
+   if (counter == 1) {
      System.out.println("Wrong guess, try again");
      System.out.println();
      System.out.println();
@@ -28,7 +38,7 @@ public class HangManApp{
      System.out.println("___|___");
      System.out.println();
    }
-   if (count == 2) {
+   if (counter == 2) {
      System.out.println("Wrong guess, try again");
      System.out.println("   |");
      System.out.println("   |");
@@ -39,7 +49,7 @@ public class HangManApp{
      System.out.println("   |");
      System.out.println("___|___");
    }
-   if (count == 3) {
+   if (counter == 3) {
      System.out.println("Wrong guess, try again");
      System.out.println("   ____________");
      System.out.println("   |");
@@ -51,7 +61,7 @@ public class HangManApp{
      System.out.println("   | ");
      System.out.println("___|___");
    }
-   if (count == 4) {
+   if (counter == 4) {
      System.out.println("Wrong guess, try again");
      System.out.println("   ____________");
      System.out.println("   |          _|_");
@@ -63,7 +73,7 @@ public class HangManApp{
      System.out.println("   |");
      System.out.println("___|___");
    }
-   if (count == 5) {
+   if (counter == 5) {
      System.out.println("Wrong guess, try again");
      System.out.println("   ____________");
      System.out.println("   |          _|_");
@@ -75,7 +85,7 @@ public class HangManApp{
      System.out.println("   |");
      System.out.println("___|___");
    }
-   if (count == 6) {
+   if (counter == 6) {
      System.out.println("Wrong guess, try again");
      System.out.println("   ____________");
      System.out.println("   |          _|_");
@@ -86,8 +96,8 @@ public class HangManApp{
            System.out.println("   |         / | \\");
      System.out.println("   |           |");
    }
-   if (count == 7) {
-     System.out.println("GAME OVER!");
+   if (counter == 7) {
+     System.out.println("GAME OVER");
      System.out.println("   ____________");
      System.out.println("   |          _|_");
      System.out.println("   |         /   \\");
@@ -98,7 +108,7 @@ public class HangManApp{
            System.out.println("   |           |");
      System.out.println("   |          / \\ ");
      System.out.println("___|___      /   \\");
-     System.out.println("GAME OVER! The word was " + word);
+     System.out.println("GAME OVER right guess was:" + word);
    }
  }
 
