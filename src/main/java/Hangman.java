@@ -45,6 +45,12 @@ public void gamer(String trial){
       rightGuesses+="*"
     }
   }
-
+if(asterisk.equals(rightGuesses)){
+  counter++;
 }
+if(asterisk.equals(userWord)){
+  System.out.println("cheers you won the game",userWord);
+}
+}
+
 }
