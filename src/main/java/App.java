@@ -1,34 +1,46 @@
 
 import java.io.Console;
 
-public class HangManApp{
+public class App{
+//private int counter=0;
 
-
+static Console myConsole=System.console();
+//static String userWord=hangman.getUserWord();
+static String userWord;
   public static void main(String[] args){
-      HangMan hangman = new HangMan();
+    Hangman hangman = new Hangman();
 
-       while (counter<7 && !userWord.equals(rightGuesses)){
+     userWord=hangman.getUserWord();
+
+
+
+
+
+       while ( hangman.GetfalseGueses()<7 && !hangman.getUserWord().equals(hangman.rightGuesses)){
+
          System.out.println("enter your guessLetter?");
+
          String guessedLetter= myConsole.readLine();
 
-        String userWord=hangman.getUserWord();
+
          String[] guesse=hangman.getGuesses();
-         int counter=hangman.GetCounter();
+         //counter=hangman.GetCounter
          boolean hangOver= hangman.getHang();
           hangman.gamer(guessedLetter);
           if(hangOver){
-            hangSketch();
+            hangSketch(hangman.GetfalseGueses());
 
           }
 
        }
-       if(userWord.equals(rightGuesses)){
+       if(userWord.equals(hangman.rightGuesses)){
          System.out.println("cheers,you won the game");
        }
      }
-     int counter=hangman.GetCounter();
+    // int counter=hangman.GetCounter();
 
-public static void hangSketch() {
+public static void hangSketch(int counter) {
+
    if (counter == 1) {
      System.out.println("Wrong guess, try again");
      System.out.println();
@@ -108,11 +120,10 @@ public static void hangSketch() {
            System.out.println("   |           |");
      System.out.println("   |          / \\ ");
      System.out.println("___|___      /   \\");
-     System.out.println("GAME OVER right guess was:" + word);
+     System.out.println("GAME OVER right guess was:" + userWord);
    }
  }
 
 
 
   }
-}
