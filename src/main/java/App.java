@@ -9,14 +9,16 @@ static Console myConsole=System.console();
 static String userWord;
   public static void main(String[] args){
     Hangman hangman = new Hangman();
+    String userWord=hangman.getUserWord();
+    int counter=hangman.GetfalseGueses();
+    String asteric=hangman.getAsterisk();
+    //String userCore
 
-     userWord=hangman.getUserWord();
 
 
 
 
-
-       while ( hangman.GetfalseGueses()<7 && !hangman.getUserWord().equals(hangman.rightGuesses)){
+       while (counter<7 && !userWord.equals(asteric)){
 
          System.out.println("enter your guessLetter?");
 
@@ -28,7 +30,7 @@ static String userWord;
          boolean hangOver= hangman.getHang();
           hangman.gamer(guessedLetter);
           if(hangOver){
-            hangSketch(hangman.GetfalseGueses());
+            hangSketch(counter);
 
           }
 
@@ -41,7 +43,7 @@ static String userWord;
 
 public static void hangSketch(int counter) {
 
-   if (counter == 1) {
+   if (counter== 1) {
      System.out.println("Wrong guess, try again");
      System.out.println();
      System.out.println();
