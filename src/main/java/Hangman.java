@@ -11,6 +11,7 @@ public class Hangman{
   private static String userWord=guesses[randomNum.nextInt(guesses.length)];
   private String asterisk=new String(new char[userWord.length()]).replace("\0","*");
   private int counter=0;
+  private boolean hangOver = false;
   private int falseGuesses;
 
   public String[] getGuesses(){
@@ -23,6 +24,10 @@ public class Hangman{
   public String getAsterisk(){
     return asterisk;
   }
+  public boolean getHang() {
+    return hangOver;
+  }
+
   public int GetCounter(){
     return counter;
   }
