@@ -17,7 +17,7 @@ public class Hangman{
     return guesses;
   }
 
-  public String geUserWord(){
+  public String getUserWord(){
     return userWord;
   }
   public String getAsterisk(){
@@ -45,12 +45,7 @@ public void gamer(String trial){
       rightGuesses+="*"
     }
   }
-if(asterisk.equals(rightGuesses)){
-  counter++;
-}
-if(asterisk.equals(userWord)){
-  System.out.println("cheers you won the game",userWord);
-}
+
 }
 
 }
