@@ -34,3 +34,4 @@ No known bugs
 
 
 ## build by abdilatif:https://github.com/abdilatifbashir.
+## android dev.
